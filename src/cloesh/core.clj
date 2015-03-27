@@ -22,6 +22,7 @@
            (org.jboss.aesh.extensions.cd            Cd)
            (org.jboss.aesh.extensions.clear         Clear)
            (org.jboss.aesh.extensions.echo          Echo)
+           (org.jboss.aesh.extensions.exit          Exit)
            (org.jboss.aesh.extensions.harlem.aesh   Harlem)
            (org.jboss.aesh.extensions.less.aesh     Less)
            (org.jboss.aesh.extensions.ls            Ls)
@@ -38,7 +39,7 @@
 
 (defn init-aesh-command-registry-builder []
   (doto (AeshCommandRegistryBuilder.)
-        (.commands (into-array Class [Cat Cd Clear Echo Harlem Less Ls Matrix Mkdir More Pwd Rm Touch]))))
+        (.commands (into-array Class [Cat Cd Clear Echo Exit Harlem Less Ls Matrix Mkdir More Pwd Rm Touch]))))
 
 (defn -main
   [& args]
