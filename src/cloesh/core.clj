@@ -34,16 +34,17 @@
            (org.jboss.aesh.extensions.touch         Touch))
   (:gen-class))
 
-(defn init-settings-builder []
+(defn- init-settings-builder []
+  "Instantiates the class SettingsBuilder and call two of its methods to initialize the object."
   (doto (SettingsBuilder.) (.readInputrc false) (.logging true)))
 
-(defn init-aesh-command-registry-builder []
+(defn- init-aesh-command-registry-builder []
+  "Instatiates the class AeshCommandRegistryBuilder and add commands to it."
   (doto (AeshCommandRegistryBuilder.)
         (.commands (into-array Class [Cat Cd Clear Echo Exit Harlem Less Ls Matrix Mkdir More Pwd Rm Touch]))))
 
-(defn -main
-  [& args]
-  (println "Cloesh wrapping Æsh for you in Clojure!\n")
+(defn -main [& args]
+  (println "\nCloesh is a Clojure app that wraps Æsh for you!\nDeveloped by Hildeberto Mendonca - hildeberto.com\n")
   (let [sb   (init-settings-builder)
         acrb (init-aesh-command-registry-builder)]
       (let [acb (doto (AeshConsoleBuilder.) (.commandRegistry (.create acrb))

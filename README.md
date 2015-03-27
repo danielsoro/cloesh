@@ -4,21 +4,36 @@ Just a Clojure wrapper to use aesh.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+You will need JDK 8 and Leiningen (leiningen.org) installed and configured.
+
+To run it from the source code:
+
+    $ git clone https://github.com/EsmerilProgramming/cloesh.git
+    $ cd cloesh
+    $ lein run
+    
+To run it from a self-contained jar:
+
+    $ curl -O https://github.com/EsmerilProgramming/cloesh/releases/download/0.1.0/cloesh-0.1.0-standalone.jar
+    $ java -jar cloesh-0.1.0-standalone.jar
 
 ## Usage
 
-FIXME: explanation
+Commands available:
 
- $ java -jar cloesh-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
+- cat
+- cd
+- clear
+- echo
+- harlem
+- less
+- ls
+- matrix
+- mkdir
+- more
+- pwd
+- rm
+- touch
 
 ## License
 
