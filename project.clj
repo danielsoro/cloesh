@@ -1,4 +1,4 @@
-(defproject cloesh "0.1.0"
+(defproject cloesh "0.1.1"
   :description "Just a Clojure wrapper to use aesh"
   :url "https://github.com/EsmerilProgramming/cloesh"
   :license {:name "Apache License Version 2"
